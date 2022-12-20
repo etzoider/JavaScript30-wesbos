@@ -1,3 +1,4 @@
+
 html {
   font-size: 10px;
   background-color: rgba(0,0,0,0.4);
@@ -13,11 +14,25 @@ body,html {
 .keys {
   display: flex;
   flex: 1;
-  min-height: 100vh;
-  gap: 20px;
   align-items: flex-end;
   justify-content: center;
 }
+.bars {
+  display: flex;
+  justify-content: space-around;
+  background-color: orange;
+  min-height: 80vh;
+}
+
+.bar {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.09s ease;
+  padding: 0px 30px;
+  border: 3px solid black;
+}
+
 
 .key {
   border: .4rem solid black;
@@ -25,7 +40,7 @@ body,html {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  transition: all .07s ease;
+  transition: all 0.07s ease;
   width: 10rem;
   text-align: center;
   color: white;

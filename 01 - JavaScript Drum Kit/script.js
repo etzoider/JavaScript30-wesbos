@@ -2,6 +2,8 @@
 const body = document.querySelector('body');
 const keys = document.querySelector('.keys');
 const sepKeys = document.querySelectorAll('.key');
+const bars = document.querySelector('.bars');
+const sepBars = document.querySelectorAll('.bar');
 
 //event listener to get pressed key and activate targeted audio and animation
 window.addEventListener('keydown', function(event) {
@@ -13,6 +15,13 @@ window.addEventListener('keydown', function(event) {
 
 //adding event listener to remove animation class after animation is completed
 sepKeys.forEach(key => { 
+    key.addEventListener('transitionend', function () {
+        key.classList.remove('playing');
+    })  
+})
+
+//adding event listener to remove animation class after animation is completed
+sepBars.forEach(key => { 
     key.addEventListener('transitionend', function () {
         key.classList.remove('playing');
     })  
